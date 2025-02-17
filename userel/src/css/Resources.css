@@ -1,0 +1,39 @@
+.rsc-container {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.btn-add-bundle {
+    background-color: darkblue;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-add-bundle:hover {
+    background-color: #0056b3;
+}

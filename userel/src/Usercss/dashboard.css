@@ -1,0 +1,117 @@
+.dashboard-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  margin: -10px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.UserSideBar{
+  background-color: #ffd700;
+  width: 250px;
+  height: 800px;
+  position: sticky;
+  top: 0;
+}
+
+.UserTopBar{
+background-color: #343f82;
+height: 135px;
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+position: sticky;
+top: 0;
+}
+
+.Left-content{
+background-color: #343f82;
+}
+
+.Left-content p{
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.5rem;
+  margin-top: 70px;
+  margin-left: 20px;
+  color: white;
+  
+}
+
+.Right-content{
+background-color: #343f82;
+display: flex;
+flex-direction: row;
+margin-top: 20px;
+margin-right: 20px;
+gap: 25px;
+align-items: center;
+
+}
+
+.Right-content p{
+  color: white;
+  font-size: 20px;
+}
+
+.EventLink-Logo{
+  
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.EventLink-Logo img{
+  width: 200px;
+}
+
+.Sidebar-content{
+height: 90%;
+background-color: #ffd700;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.Top-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffd700;
+  
+
+}
+
+.Top-content a{
+  text-decoration: none;
+  color: inherit;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.4rem;
+  padding: 15px;
+}
+
+
+.Bot-content{
+  width: 100%;
+  background-color: #ffd700;
+  margin-bottom: 15px;
+
+}
+
+.Bot-content a{
+  text-decoration: none;
+  color: inherit;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.4rem;
+  padding: 15px;
+}
+
+
+

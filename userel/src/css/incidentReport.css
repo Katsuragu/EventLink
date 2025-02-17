@@ -1,0 +1,65 @@
+.incident-container {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.incident-type-container {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    width: 300px;
+}
+
+.type-of-incident {
+    font-weight: bold;
+}
+
+.incident-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.incident-options label {
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.incident-describe {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.container-describe-incident {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.incident-btn {
+    background-color: darkblue;
+    color: white;
+    font-size: 18px;
+    width: 80px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.input-describe {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+}

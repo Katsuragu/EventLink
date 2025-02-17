@@ -1,0 +1,272 @@
+.Login-Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 960px;
+
+  margin: -10px;
+  padding: 0;
+}
+
+.Login-Left-Side {
+  display: flex;
+  width: 100%;
+  background-color: #343f82;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Left-Side-Content1 {
+  height: 100px;
+  margin-top: 180px;
+}
+
+.Left-Side-Content1 p {
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #FFD700;
+  font-size: 100px;
+}
+
+.Left-Side-Content2 {
+
+  height: 100px;
+}
+
+.Left-Side-Content2 p {
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #FFD700;
+  font-size: 100px;
+}
+
+.Left-Side-Content3 {
+  height: 100px;
+}
+
+.Left-Side-Content3 p {
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #FFD700;
+  font-size: 100px;
+}
+
+.Login-Right-Side p {
+  
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.5rem;
+  margin-left: 20px;
+  color: rgb(0, 0, 0);
+
+}
+
+.Login-Right-Side {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+
+
+.Login-Right-Side p {
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 60px;
+}
+
+.Login-Content {
+  display: flex;
+  background-color: rgb(224, 224, 221);
+  width: 400px;
+  height: 400px;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px 5px #b4b4b4;
+  
+}
+
+.Login-Text p {
+  height: 20px;
+
+}
+
+.Email-Input {
+  
+  background-color: rgb(224, 224, 221);
+  color: inherit;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  
+}
+
+.Email-Input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.Email-Field {
+  width: 350px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: 1px solid #686666;
+}
+
+.Email-Field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.Login-Input {
+  margin-top: 60px;
+  color: inherit;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: rgb(224, 224, 221);
+}
+
+.Login-Input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.Login-Field {
+  width: 350px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: 1px solid #dacece;
+}
+
+.Login-Field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+
+
+
+.Login-Input1 {
+ 
+  color: inherit;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  
+  background-color: rgb(224, 224, 221);
+}
+
+.Login-Input1 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.Login-Field1 {
+  width: 350px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: 1px solid #dacece;
+}
+
+.Login-Field1:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+
+
+.Password-Input {
+  color: inherit;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: rgb(224, 224, 221);
+}
+
+.Password-Input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.Password-Field {
+  width: 300px;
+
+  margin-top: 5px;
+  border-radius: 20px;
+  
+}
+
+.Password-Field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.save-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.Back-Icon {
+  margin-right: 290px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  background-color: rgb(224, 224, 221);
+}
+
+.Signup-Link {
+  text-align: center;
+  margin-top: 0; 
+}
+
+
+.Signup-Link p {
+  margin: 0; 
+}
+
+
+.Signup-Link a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black; 
+  font-weight: 500; 
+  transition: color 0.3s ease;
+}
+
+
+.Signup-Link a:hover {
+  color: #414142; 
+  text-decoration: underline; 
+}

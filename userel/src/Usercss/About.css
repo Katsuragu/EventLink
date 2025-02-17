@@ -1,0 +1,103 @@
+/* Top Navbar */
+.top-navbar {
+    background-image: "assets/logo.jpg";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .top-navbar .menu a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    transition: color 0.3s;
+  }
+  
+  .top-navbar .menu a:hover {
+    color: #ffd700;
+  }
+  
+
+  
+  /* Main Container */
+  .main-container {
+    display: flex;
+    margin-top: 60px; /* Offset for top navbar */
+  }
+  
+  /* Side Navbar */
+  .side-navbar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes content to the top and bottom */
+  }
+  
+  .side-navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    transition: color 0.3s;
+  }
+  
+  .side-navbar a:hover {
+    color: #ffd700;
+  }
+  
+  /* Content Area */
+  .content {
+    margin-left: 220px; /* Offset for side navbar */
+    padding: 20px;
+    flex-grow: 1;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 2px; /* Adds space between the text and icons */
+    margin-right: 40px;
+  }
+  
+  .greeting {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .icon-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Inherits the color of the text */
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bottom-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds spacing between the links */
+  }
+
+  .bottom-links a {
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  

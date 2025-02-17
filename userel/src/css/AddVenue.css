@@ -1,0 +1,44 @@
+.first-container {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    resize: none;
+    margin-top: 10px;
+    width: 80%;
+}
+
+.submit-btn {
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.second-container {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
