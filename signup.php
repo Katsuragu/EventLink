@@ -38,6 +38,11 @@ try {
             exit;
         }
 
+        if (!preg_match('/[!@#$%^&*(),.?":{}|<>]/', $password)) {
+            echo json_encode(["error" => "Password must include at least one special character"]);
+            exit;
+        }
+
         // Check if username already exists
         $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE username = ?");
         $stmt->execute([$username]);
