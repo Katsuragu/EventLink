@@ -23,7 +23,7 @@ function Preview() {
     // Check if the user is authenticated
     const username = localStorage.getItem('username');
     if (!username) {
-      navigate('/login');
+      navigate('/');
     }
   }, [navigate]);
 
@@ -35,7 +35,7 @@ function Preview() {
     // Clear session data
     localStorage.removeItem('username');
     localStorage.removeItem('access');
-    navigate('/login');
+    navigate('/');
   };
 
   return (

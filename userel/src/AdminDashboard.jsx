@@ -15,7 +15,7 @@ export default function AdminDashboard() {
         // Check if the user is authenticated
         const username = localStorage.getItem('username');
         if (!username) {
-            navigate('/login');
+            navigate('/');
         }
     }, [navigate]);
 
@@ -78,21 +78,10 @@ export default function AdminDashboard() {
                     <div className="admin-content-footer">
                         <div className="admin-footer-calendar" onClick={handleCalendarClick}>
                             <label htmlFor="" style={{ cursor: "pointer" }}>Calendar</label>
+                            
                         </div>
 
-                        <div className="admin-footer-feedback">
-                            <div className="admin-feedback-header">
-                                <h2>Feedback</h2>
-                            </div>
-                            <div className="admin-feedback-items">
-                                <div className="admin-items-left">
-                                </div>
-                                <div className="admin-items-right">
-                                    <div className="items-right-user">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
 
                     {showCalendar && (
