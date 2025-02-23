@@ -19,6 +19,7 @@ export default function AdminSidebar(props) {
                             <label htmlFor="">{props.item1}</label>
                         </div>
                     </Link>
+                    
 
                     <Link to="/AdminReservation">
                         <div className="admin-dashboard-item">
@@ -50,6 +51,8 @@ export default function AdminSidebar(props) {
                         </div>
                     </div>
                 </Link>
+                
+                
             </div>  
         </div>
     );

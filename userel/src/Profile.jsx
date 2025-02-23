@@ -14,7 +14,8 @@ function Profile() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [firstName, setFirstName] = useState('Noli');
   const [lastName, setLastName] = useState('Example');
-  const [password, setPassword] = useState('password123');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -38,6 +39,38 @@ function Profile() {
 
   const handleChange = (e, setState) => {
     setState(e.target.value);
+  };
+
+  const handlePasswordChange = async () => {
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost/elphp/change_password.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          username: localStorage.getItem('username'),
+          password: password
+        })
+      });
+
+      const result = await response.json();
+      if (result.error) {
+        alert(result.error);
+      } else {
+        alert("Password changed successfully");
+        setPassword('');
+        setConfirmPassword('');
+      }
+    } catch (error) {
+      console.error("Error changing password:", error);
+      alert("Error changing password");
+    }
   };
 
   return (
@@ -107,17 +140,9 @@ function Profile() {
                 className="input-field"
               />
             </div>
+           
             <div className="input-group">
-              <label>Last Name:</label>
-              <input
-                type="text"
-                value={lastName}
-                onChange={(e) => handleChange(e, setLastName)}
-                className="input-field"
-              />
-            </div>
-            <div className="input-group">
-              <label>Password:</label>
+              <label>New Password:</label>
               <input
                 type="password"
                 value={password}
@@ -125,9 +150,18 @@ function Profile() {
                 className="input-field"
               />
             </div>
+            <div className="input-group">
+              <label>Confirm Password:</label>
+              <input
+                type="password"
+                value={confirmPassword}
+                onChange={(e) => handleChange(e, setConfirmPassword)}
+                className="input-field"
+              />
+            </div>
 
             {/* Edit Profile Button */}
-            <button className="save-button" onClick={() => alert('Edit Profile Clicked')}>Update</button>
+            <button className="save-button" onClick={handlePasswordChange}>Update</button>
           </div>
         </div>
       </div>

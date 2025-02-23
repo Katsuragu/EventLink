@@ -34,6 +34,14 @@ function UserDashboard() {
   const [venueBookingData, setVenueBookingData] = useState([]);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Check if the user is authenticated
+    const username = localStorage.getItem('username');
+    if (!username) {
+      navigate('/');
+    }
+  }, [navigate]);
+
   const handleCalendarClick = () => {
     setShowCalendar(true);
   };

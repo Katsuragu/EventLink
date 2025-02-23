@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Login.css';
 
 function Login() {
@@ -8,8 +8,28 @@ function Login() {
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const storedUsername = localStorage.getItem('username');
+        const access = localStorage.getItem('access');
+
+        if (storedUsername && access) {
+            if (access === '1') {
+                navigate('/UserDashboard');
+            } else if (access === '2') {
+                navigate('/AdminDashboard');
+            }
+        }
+    }, [navigate]);
+
     const handleChange = (e, setState) => {
         setState(e.target.value);
+    };
+
+    const handleLogout = () => {
+        // Clear session data
+        localStorage.removeItem('username');
+        localStorage.removeItem('access');
+        navigate('/');
     };
 
     const handleLogin = async () => {
