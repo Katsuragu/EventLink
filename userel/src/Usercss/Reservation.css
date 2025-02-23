@@ -14,6 +14,13 @@
 
 }
 
+.Bot-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    margin-top: 350px;;
+  }
+
 .admin-review-container {
     display: flex;
     height: 100vh;

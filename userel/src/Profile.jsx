@@ -12,9 +12,9 @@ import logo from './assets/logo.jpg';
 
 function Profile() {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [firstName, setFirstName] = useState('Noli');
-  const [lastName, setLastName] = useState('Example');
-  const [password, setPassword] = useState('password123');
+  const [newUsername, setNewUsername] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -38,6 +38,29 @@ function Profile() {
 
   const handleChange = (e, setState) => {
     setState(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost/auth.php/change', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ newUsername, newPassword }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage(data.message);
+        // Optionally, redirect the user to another page
+        navigate('/UserDashboard');
+      } else {
+        setMessage(data.error);
+      }
+    } catch (error) {
+      setMessage('Unable to connect to the server. Please try again.');
+    }
   };
 
   return (
@@ -98,36 +121,30 @@ function Profile() {
               <h2>{localStorage.getItem('username')}'s Profile</h2>
             </div>
 
-            <div className="input-group">
-              <label>First Name:</label>
-              <input
-                type="text"
-                value={firstName}
-                onChange={(e) => handleChange(e, setFirstName)}
-                className="input-field"
-              />
-            </div>
-            <div className="input-group">
-              <label>Last Name:</label>
-              <input
-                type="text"
-                value={lastName}
-                onChange={(e) => handleChange(e, setLastName)}
-                className="input-field"
-              />
-            </div>
-            <div className="input-group">
-              <label>Password:</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => handleChange(e, setPassword)}
-                className="input-field"
-              />
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="input-group">
+                <label>New Username:</label>
+                <input
+                  type="text"
+                  value={newUsername}
+                  onChange={(e) => handleChange(e, setNewUsername)}
+                  className="input-field"
+                />
+              </div>
+              <div className="input-group">
+                <label>New Password:</label>
+                <input
+                  type="password"
+                  value={newPassword}
+                  onChange={(e) => handleChange(e, setNewPassword)}
+                  className="input-field"
+                />
+              </div>
 
-            {/* Edit Profile Button */}
-            <button className="save-button" onClick={() => alert('Edit Profile Clicked')}>Update</button>
+              {/* Edit Profile Button */}
+              <button type="submit" className="save-button">Update</button>
+            </form>
+            {message && <p>{message}</p>}
           </div>
         </div>
       </div>
