@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './Login.css';
 
 function Login() {
-    const [username, setUsername] = useState('');
+    const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
@@ -28,6 +28,7 @@ function Login() {
     const handleLogout = () => {
         // Clear session data
         localStorage.removeItem('username');
+        localStorage.removeItem('email');
         localStorage.removeItem('access');
         navigate('/');
     };
@@ -37,14 +38,15 @@ function Login() {
             const response = await fetch('http://localhost/auth.php/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password }),
+                body: JSON.stringify({ login, password }),
             });
 
             const data = await response.json();
 
             if (response.ok && data.redirect) {
                 // Store session data in local storage
-                localStorage.setItem('username', username);
+                localStorage.setItem('username', data.username);
+                localStorage.setItem('email', data.email);
                 localStorage.setItem('access', data.access);
 
                 if (data.access === 1) {
@@ -83,12 +85,12 @@ function Login() {
 
                 <div className="Login-Content" style={{ marginTop: '100px' }}>
                     <div className="Login-Input">
-                        <label htmlFor="username">Username:</label>
+                        <label htmlFor="login">Username or Email:</label>
                         <input
                             type="text"
-                            id="username"
-                            value={username}
-                            onChange={(e) => handleChange(e, setUsername)}
+                            id="login"
+                            value={login}
+                            onChange={(e) => handleChange(e, setLogin)}
                             className="Login-Field"
                         />
                     </div>

@@ -187,7 +187,7 @@ function Book({ onBookingAdded }) {
         <div className="content-container">
           <form onSubmit={handleSubmit}>
             <div className="text-box-container">
-              <label htmlFor="eventTitle" className="text-label">Title of the Event</label>
+              <label htmlFor="eventTitle" className="text-label">Title of the Event*</label>
               <input
                 id="eventTitle"
                 type="text"
@@ -197,7 +197,7 @@ function Book({ onBookingAdded }) {
                 onChange={(e) => setEventTitle(e.target.value)}
               />
 
-              <label htmlFor="venue" className="text-label">Venue</label>
+              <label htmlFor="venue" className="text-label">Venue*</label>
               <select
                 id="venue"
                 className="dropdown-box"
@@ -210,7 +210,7 @@ function Book({ onBookingAdded }) {
                 ))}
               </select>
 
-              <label htmlFor="startTime" className="text-label">Date & Time</label>
+              <label htmlFor="startTime" className="text-label">Date & Time*</label>
               <input
                 id="startTime"
                 type="datetime-local"
@@ -221,7 +221,7 @@ function Book({ onBookingAdded }) {
                 min={today}
               />
 
-              <label htmlFor="endTime" className="text-label">Event Ended</label>
+              <label htmlFor="endTime" className="text-label">Event Ended*</label>
               <input
                 id="endTime"
                 type="datetime-local"
@@ -232,7 +232,7 @@ function Book({ onBookingAdded }) {
                 min={startTime}
               />
 
-              <label htmlFor="resources" className="text-label">Resources</label>
+              <label htmlFor="resources" className="text-label">Resources*</label>
               <select
                 id="resources"
                 className="dropdown-box"
@@ -248,7 +248,7 @@ function Book({ onBookingAdded }) {
               </select>
 
               <div className='remarks-box'>
-                <p>Remarks</p>
+                <p>Remarks*</p>
                 <textarea
                   id="remarks"
                   type="textarea"

@@ -12,7 +12,7 @@ import logo from './assets/logo.jpg';
 
 function Profile() {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [firstName, setFirstName] = useState('Noli');
+  const [username, setUsername] = useState('Noli');
   const [lastName, setLastName] = useState('Example');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -22,7 +22,7 @@ function Profile() {
     // Check if the user is authenticated
     const username = localStorage.getItem('username');
     if (!username) {
-      navigate('/login');
+      navigate('/');
     }
   }, [navigate]);
 
@@ -132,11 +132,11 @@ function Profile() {
             </div>
 
             <div className="input-group">
-              <label>First Name:</label>
+              <label>Username:</label>
               <input
                 type="text"
-                value={firstName}
-                onChange={(e) => handleChange(e, setFirstName)}
+                value={username}
+                onChange={(e) => handleChange(e, setUsername)}
                 className="input-field"
               />
             </div>

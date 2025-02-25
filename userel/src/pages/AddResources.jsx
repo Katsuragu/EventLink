@@ -79,7 +79,7 @@ export default function AddResources() {
 
     const fetchBundles = async () => {
         try {
-            const response = await fetch("http://localhost/elphp/get_resources.php");
+            const response = await fetch("http://localhost/elphp/table_resources.php");
             const result = await response.json();
             setBundles(result);
         } catch (error) {
